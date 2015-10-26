@@ -1,0 +1,226 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-26 16:40:46 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/mint/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 23ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (45.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (21.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMessages (20151026164344)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user" varchar, "message_text" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151026164344"]]
+  [1m[35m (32.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-10-26 16:48:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.1ms)[0m  SELECT "messages".* FROM "messages"
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  Rendered messages/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 664ms (Views: 656.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/messages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-26 16:48:56 +0000
+
+
+Started GET "/assets/scaffolds.self-88ed62f9226cf4dc13a1a0407b0f50df13c2c6d35adc59759f5a56b2df74b0d1.css?body=1" for 127.0.0.1 at 2015-10-26 16:48:56 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-26 16:48:56 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-26 16:48:56 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-26 16:48:56 +0000
+
+
+Started GET "/assets/messages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-26 16:48:56 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-26 16:48:56 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-26 16:48:56 +0000
+
+
+Started GET "/messages/new" for 127.0.0.1 at 2015-10-26 16:49:06 +0000
+Processing by MessagesController#new as HTML
+  Rendered messages/_form.html.erb (29.4ms)
+  Rendered messages/new.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 81ms (Views: 71.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2015-10-26 16:49:53 +0000
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oKCSPXR7SX5NaSkQ4EtUnEfin9KhfH33TYtLOPH695NaY9KFZO5VT1RpBm96Si/PCdwcHvS8djC9DCZqr/Cbpw==", "message"=>{"user"=>"ivis", "message_text"=>"hgahvsdk"}, "commit"=>"Create Message"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "messages" ("user", "message_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user", "ivis"], ["message_text", "hgahvsdk"], ["created_at", "2015-10-26 16:49:53.338828"], ["updated_at", "2015-10-26 16:49:53.338828"]]
+  [1m[35m (96.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/messages/1
+Completed 302 Found in 103ms (ActiveRecord: 97.3ms)
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2015-10-26 16:49:53 +0000
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMessage Load (0.3ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered messages/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-10-26 16:49:57 +0000
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages"
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  Rendered messages/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2015-10-26 16:50:16 +0000
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMessage Load (0.1ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered messages/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-10-26 16:50:20 +0000
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  [1m[35mMessage Load (0.1ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  Rendered messages/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/messages/1" for 127.0.0.1 at 2015-10-26 16:50:25 +0000
+Processing by MessagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8eiBcRpcc5iWnBx5UJn2KHXk4JAnRiXvu6SH2+5tSswLK8HJCslvqY+cMwbKmI17O9pjXHKGLihLI+qJsGcm+A==", "id"=>"1"}
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "messages" WHERE "messages"."id" = ?[0m  [["id", 1]]
+  [1m[35m (32.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/messages
+Completed 302 Found in 38ms (ActiveRecord: 33.4ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-10-26 16:50:25 +0000
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  [1m[35mMessage Load (0.1ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  Rendered messages/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/messages/new" for 127.0.0.1 at 2015-10-26 16:51:22 +0000
+Processing by MessagesController#new as HTML
+  Rendered messages/_form.html.erb (2.1ms)
+  Rendered messages/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2015-10-26 16:51:37 +0000
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5e3zKIwA/d2Z0vxqAgepeFYPbAjRJ6kiHWF8T5OczjofLrOQnJXh7IDS0xWYBtIrGDHvxITnouXt5hEdzZaiDg==", "message"=>{"user"=>"ivis", "message_text"=>"hola como estas"}, "commit"=>"Create Message"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "messages" ("user", "message_text", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user", "ivis"], ["message_text", "hola como estas"], ["created_at", "2015-10-26 16:51:37.430071"], ["updated_at", "2015-10-26 16:51:37.430071"]]
+  [1m[36m (180.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/messages/2
+Completed 302 Found in 186ms (ActiveRecord: 180.7ms)
+
+
+Started GET "/messages/2" for 127.0.0.1 at 2015-10-26 16:51:37 +0000
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMessage Load (0.1ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered messages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-10-26 16:51:43 +0000
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages"[0m
+  [1m[35mMessage Load (0.1ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  Rendered messages/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/messages/2" for 127.0.0.1 at 2015-10-26 16:51:46 +0000
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered messages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2015-10-26 16:54:44 +0000
+Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT "messages".* FROM "messages"
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1  [["user", "ejemplo"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."user" = ? LIMIT 1[0m  [["user", "ejemplo"]]
+  Rendered messages/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.4ms)
